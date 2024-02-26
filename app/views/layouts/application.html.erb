@@ -14,8 +14,14 @@
     <nav>
       <a href="/">Bulletin Board</a>
 
-       <a href="/users/sign_up">Sign Up</a>
+      <% if current_user != nil %>
+       <a href="/users/sign_up">Sign out</a>
+       <a href="/users/sign_up">Edit Profile</a>
 
+      <% else  %>
+       <a href="/users/sign_up">Sign Up</a>
+       <a href="/users/sign_up">Sign in</a>
+      <% end  %>
     </nav>
 
     <hr>
